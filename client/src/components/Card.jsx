@@ -3,6 +3,15 @@ import React from "react";
 import { download } from "../assets";
 import { downloadImage } from "../utils";
 
+/**
+ * Renders a Card component.
+ *
+ * @param {Object} _id - The ID of the card.
+ * @param {string} name - The name of the card.
+ * @param {string} prompt - The prompt for the card.
+ * @param {string} photo - The URL of the photo for the card.
+ * @return {JSX.Element} The rendered Card component.
+ */
 const Card = ({ _id, name, prompt, photo }) => (
   <div className="rounded-xl group relative shadow-card hover:shadow-cardhover card">
     <img

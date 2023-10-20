@@ -1,3 +1,5 @@
+/* This code is a JavaScript file that defines a router for handling HTTP requests related to posts. It
+uses the Express framework to create the router and handle the routes. */
 import express from "express";
 import * as dotenv from "dotenv";
 import { v2 as cloudinary } from "cloudinary";

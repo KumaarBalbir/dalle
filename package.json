@@ -1,0 +1,14 @@
+{
+  "name": "dalle",
+  "version": "1.0.0",
+  "description": "generative ai using openai api",
+  "main": "index.js",
+  "scripts": {
+    "docs": "npx jsdoc -c ./.jsdoc.conf.json"
+  },
+  "author": "Kumaar Balbir",
+  "license": "MIT",
+  "devDependencies": {
+    "jsdoc": "^4.0.2"
+  }
+}

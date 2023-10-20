@@ -1,4 +1,32 @@
-import React, { useState } from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: client/src/page/CreatePost.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: client/src/page/CreatePost.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 import { preview } from "../assets";
@@ -47,7 +75,7 @@ const CreatePost = () => {
   /**
    * Generates an image based on the provided prompt.
    *
-   * @return {Promise<void>} - A promise that resolves when the image generation is complete.
+   * @return {Promise&lt;void>} - A promise that resolves when the image generation is complete.
    */
   const generateImage = async () => {
     if (form.prompt) {
@@ -83,12 +111,12 @@ const CreatePost = () => {
    * Handles the form submission.
    *
    * @param {Event} e - The event object.
-   * @return {Promise<void>} A promise that resolves when the submission is complete.
+   * @return {Promise&lt;void>} A promise that resolves when the submission is complete.
    */
   const handleSubmit = async (e) => {
     e.preventDefault(); //so that browser does not automatically reload our application
 
-    if (form.prompt && form.photo) {
+    if (form.prompt &amp;&amp; form.photo) {
       setLoading(true);
       try {
         const response = await fetch(
@@ -116,18 +144,18 @@ const CreatePost = () => {
   };
 
   return (
-    <section className="max-w-7xl mx-auto">
-      <div>
-        <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-        <p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">
+    &lt;section className="max-w-7xl mx-auto">
+      &lt;div>
+        &lt;h1 className="font-extrabold text-[#222328] text-[32px]">Create&lt;/h1>
+        &lt;p className="mt-2 text-[#666e75] text-[14px] max-w-[500px]">
           Generate an imaginative image through DALL-E AI and share it with the
           community
-        </p>
-      </div>
+        &lt;/p>
+      &lt;/div>
 
-      <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
-        <div className="flex flex-col gap-5">
-          <FormField
+      &lt;form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
+        &lt;div className="flex flex-col gap-5">
+          &lt;FormField
             labelName="Your Name"
             type="text"
             name="name"
@@ -136,7 +164,7 @@ const CreatePost = () => {
             handleChange={handleChange}
           />
 
-          <FormField
+          &lt;FormField
             labelName="Prompt"
             type="text"
             name="prompt"
@@ -147,54 +175,77 @@ const CreatePost = () => {
             handleSurpriseMe={handleSurpriseMe}
           />
 
-          <div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
+          &lt;div className="relative bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 w-64 p-3 h-64 flex justify-center items-center">
             {form.photo ? (
-              <img
+              &lt;img
                 src={form.photo}
                 alt={form.prompt}
                 className="w-full h-full object-contain"
               />
             ) : (
-              <img
+              &lt;img
                 src={preview}
                 alt="preview"
                 className="w-9/12 h-9/12 object-contain opacity-40"
               />
             )}
 
-            {generatingImg && (
-              <div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
-                <Loader />
-              </div>
+            {generatingImg &amp;&amp; (
+              &lt;div className="absolute inset-0 z-0 flex justify-center items-center bg-[rgba(0,0,0,0.5)] rounded-lg">
+                &lt;Loader />
+              &lt;/div>
             )}
-          </div>
-        </div>
+          &lt;/div>
+        &lt;/div>
 
-        <div className="mt-5 flex gap-5">
-          <button
+        &lt;div className="mt-5 flex gap-5">
+          &lt;button
             type="button"
             onClick={generateImage}
             className=" text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {generatingImg ? "Generating..." : "Generate"}
-          </button>
-        </div>
+          &lt;/button>
+        &lt;/div>
 
-        <div className="mt-10">
-          <p className="mt-2 text-[#666e75] text-[14px]">
+        &lt;div className="mt-10">
+          &lt;p className="mt-2 text-[#666e75] text-[14px]">
             ** Once you have created the image you want, you can share it with
             others in the community **
-          </p>
-          <button
+          &lt;/p>
+          &lt;button
             type="submit"
             className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           >
             {loading ? "Sharing..." : "Share with the Community"}
-          </button>
-        </div>
-      </form>
-    </section>
+          &lt;/button>
+        &lt;/div>
+      &lt;/form>
+    &lt;/section>
   );
 };
 
 export default CreatePost;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#Card">Card</a></li><li><a href="global.html#CreatePost">CreatePost</a></li><li><a href="global.html#FormField">FormField</a></li><li><a href="global.html#Loader">Loader</a></li><li><a href="global.html#connectDB">connectDB</a></li><li><a href="global.html#getRandomPrompt">getRandomPrompt</a></li><li><a href="global.html#startServer">startServer</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Fri Oct 20 2023 19:34:31 GMT+0530 (India Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

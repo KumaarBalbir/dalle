@@ -1,5 +1,18 @@
 import React from "react";
 
+/**
+ * Renders a form field component.
+ *
+ * @param {string} labelName - The name of the label for the field.
+ * @param {string} type - The type of the input field.
+ * @param {string} name - The name of the input field.
+ * @param {string} placeholder - The placeholder text for the input field.
+ * @param {string} value - The value of the input field.
+ * @param {function} handleChange - The event handler for input field changes.
+ * @param {boolean} isSurpriseMe - Indicates if the "Surprise me" button should be shown.
+ * @param {function} handleSurpriseMe - The event handler for the "Surprise me" button click.
+ * @return {ReactNode} The rendered form field component.
+ */
 const FormField = ({
   labelName,
   type,

@@ -20,16 +20,24 @@ const Home = () => {
   const [searchTimeout, setSearchTimeout] = useState(null);
   const [searchedResults, setSearchedResults] = useState(null); //for searching the post shared by community
 
+  /**
+   * Fetches posts from the API and updates the state accordingly.
+   *
+   * @return {Promise<void>} - A promise that resolves when the function completes fetching and updating the state.
+   */
   const fetchPosts = async () => {
     setLoading(true);
 
     try {
-      const response = await fetch("http://localhost:8080/api/v1/post", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await fetch(
+        "https://dalle-backend-hnqt.onrender.com/api/v1/post",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       if (response.ok) {
         const result = await response.json();
@@ -46,7 +54,12 @@ const Home = () => {
     fetchPosts();
   }, []);
 
-  // search posts shared by community
+  /**
+   * Handles the change event of the search input and performs a search operation.
+   *
+   * @param {Object} e - The event object.
+   * @return {void} This function does not return anything.
+   */
   const handleSearchChange = (e) => {
     clearTimeout(searchTimeout);
     setSearchText(e.target.value);

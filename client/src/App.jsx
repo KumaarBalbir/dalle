@@ -4,6 +4,11 @@ import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
 import { logo } from "./assets";
 import { Home, CreatePost } from "./page";
 
+/**
+ * Render the main App component.
+ *
+ * @return {JSX.Element} The JSX element representing the App component.
+ */
 const App = () => (
   <BrowserRouter>
     <header className="w-full flex justify-between items-center bg-white sm:px-8 px-4 py-4 border-b border-b-[#e6ebf4]">

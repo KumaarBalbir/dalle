@@ -1,3 +1,4 @@
+/* The code you provided is a basic setup for a Node.js server using the Express framework.*/
 import express from "express";
 import * as dotenv from "dotenv";
 import cors from "cors";
@@ -21,6 +22,11 @@ app.get("/", async (req, res) => {
   res.send("Hello from DALL-E!");
 });
 
+/**
+ * Starts the server.
+ *
+ * @return {Promise<void>} - A promise that resolves when the server has started.
+ */
 const startServer = async () => {
   try {
     connectDB(process.env.MONGODB_URL);

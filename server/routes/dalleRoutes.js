@@ -1,3 +1,5 @@
+/* The code you provided is a JavaScript code snippet that sets up a server using the Express
+framework. */
 import express from "express";
 import * as dotenv from "dotenv";
 import OpenAI from "openai";

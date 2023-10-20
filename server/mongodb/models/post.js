@@ -1,3 +1,4 @@
+/* The code you provided is defining a Mongoose schema for a "Post" object. */
 import mongoose from "mongoose";
 
 const Post = new mongoose.Schema({
