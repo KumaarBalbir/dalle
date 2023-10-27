@@ -87,4 +87,3 @@ This project is open-source and available under the MIT License.
 
 - Special thanks to the OpenAI team for providing access to the DALL-E API.
 - Thanks to the open-source community for the libraries and tools used in this project.
-```
