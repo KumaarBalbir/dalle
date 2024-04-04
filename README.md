@@ -75,13 +75,6 @@ DALL-E Clone is a web application that leverages the power of the OpenAI API to 
 - Vite (for client development)
 - Tailwind CSS
 
-## Credit
-
-- A big thanks to Adrian Hajdin - JS Mastery (https://github.com/adrianhajdin) for creating such a nice tutorial!
-
-## License
-
-This project is open-source and available under the MIT License.
 
 ## Acknowledgments
 
