@@ -12,6 +12,11 @@ DALL-E Clone is a web application that leverages the power of the OpenAI API to 
 - **Search Functionality**: Easily find specific posts using the search feature.
 - **Responsive Design**: The application is designed to work seamlessly on various devices.
 
+## Architecture 
+
+
+![architecture-dalle](assets/dalle-architecture.png)
+
 ## Installation
 
 1. Clone the repository:
